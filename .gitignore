@@ -5,3 +5,12 @@ __pycache__/
 *.pyc
 .DS_Store
 venv/
+venv/
+data/raw/
+data/processed/
+notebooks/data/
+__pycache__/
+*.pyc
+*.log
+*.ipynb_checkpoints
+*.DS_Store
