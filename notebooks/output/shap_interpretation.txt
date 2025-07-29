@@ -1,0 +1,21 @@
+SHAP Interpretation for Fraud Detection Models
+
+Fraud_Data.csv:
+- Key drivers of fraud (based on SHAP summary plot):
+  - signup_to_purchase_sec: Short time between signup and purchase is a strong indicator of fraud, suggesting rushed or automated behavior.
+  - purchase_value: Unusually high or low purchase values contribute significantly to fraud predictions.
+  - user_txn_count: High transaction frequency may indicate suspicious activity.
+  - is_country_top10: Transactions from high-risk countries may have higher fraud associations.
+
+creditcard.csv (processed as fraud_features.csv):
+- Key drivers of fraud (based on SHAP summary plot):
+  - signup_to_purchase_sec: Similar to Fraud_Data, short signup-to-purchase times are critical.
+  - purchase_value: Extreme values indicate potential fraud.
+  - purchase_hour/purchase_dayofweek: Unusual transaction timing may signal fraud.
+  - user_txn_count: Frequent transactions are a key indicator.
+
+Business Recommendations:
+1. Implement real-time monitoring for transactions with short signup_to_purchase_sec.
+2. Flag transactions with extreme purchase_value or high user_txn_count.
+3. Incorporate geolocation-based risk assessment using is_country_top10.
+4. Monitor transactions for unusual purchase_hour or purchase_dayofweek patterns.
